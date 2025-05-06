@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    padding-block: 1vh;
+    padding-inline: 10vw;
+    background-color: #F8F9F4;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        
+        .logo {
+            width: 5%;
+            height: auto;
+            max-width: 100%;
+            cursor: pointer;
+        }
+
+        .categories {
+            display: flex;
+            column-gap: 2vw;
+            list-style: none;
+
+            li {
+                cursor: pointer;
+            }
+        }
+
+        .login {
+            cursor: pointer;
+        }
+
+        .bag-of-items {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: #333842;
+        }
+    }
+}
+
+h3 {
+    color: #333842;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
