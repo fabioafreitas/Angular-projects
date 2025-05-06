@@ -1,0 +1,17 @@
+<div class="product-detail" *ngIf="product">
+    <div class="image-section">
+        <img [src]="product.image" [alt]="product.title" />
+    </div>
+
+    <div class="info-section">
+        <div class="category">{{ product.category }}</div>
+        <h2>{{ product.title }}</h2>
+        <div class="description">{{ product.description }}</div>
+        <div class="price">$ {{ product.price }}</div>
+        </div>
+    </div>
+  
+<div *ngIf="!product">
+    <p>Loading or product not found...</p>
+</div>
+  

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,4 +9,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  isHeaderShrunk = signal(false);
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isHeaderShrunk.set(window.scrollY > 20);
+  }
 }

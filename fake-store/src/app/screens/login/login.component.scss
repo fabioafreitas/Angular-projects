@@ -1,0 +1,7 @@
+.webview-wrapper {
+    width: 100%;
+    height: calc(100vh - 80px); // subtract header height
+    overflow: hidden;
+    border: 1px solid #ddd;
+  }
+  

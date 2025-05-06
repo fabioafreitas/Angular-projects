@@ -1,11 +1,21 @@
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+    padding-block: 1.5vh;
+    &.shrink {
+        padding-block: 0vh;
+    }
     display: flex;
-    padding-block: 1vh;
     padding-inline: 10vw;
     background-color: #F8F9F4;
     color: white;
     align-items: center;
     justify-content: space-between;
+    box-shadow:  0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+    
+    
 
     nav {
         display: flex;
@@ -27,6 +37,7 @@ header {
 
             li {
                 cursor: pointer;
+                
             }
         }
 
@@ -44,5 +55,4 @@ header {
 
 h3 {
     color: #333842;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
 }

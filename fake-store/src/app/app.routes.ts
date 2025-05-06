@@ -1,18 +1,26 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        loadComponent: () => {
-            return import('./screens/home/home.component').then((m) => m.HomeComponent)
-        },
+        redirectTo: '/all-products',
+        // loadComponent: () => {
+        //     return import('./screens/home/home.component').then((m) => m.HomeComponent)
+        // },
     },
     {
         path: 'login',
         pathMatch: 'full',
         loadComponent: () => {
             return import('./screens/login/login.component').then((m) => m.LoginComponent)
+        },
+    },
+    {
+        path: 'product/:id',
+        loadComponent: () => {
+            return import('./screens/product-detail/product-detail.component').then((m) => m.ProductDetailComponent)
         },
     },
     {
@@ -51,3 +59,9 @@ export const routes: Routes = [
         },
     },
 ];
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule {}
